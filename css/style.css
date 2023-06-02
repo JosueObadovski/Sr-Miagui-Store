@@ -131,8 +131,8 @@ h1 {
   background: linear-gradient(180deg, #d6d6d6 11.98%, #4c4c4c 100%);
   color: white;
   position: absolute;
-  top: 79rem;
-  left: 32.5rem;
+  top: 136%;
+  left: 27.5%;
   padding: 10px 20px;
   border: none;
   border-radius: 8x;
@@ -145,8 +145,8 @@ h1 {
   background: linear-gradient(180deg, #000000 58.33%, #2f2f39 100%);
   color: white;
   position: absolute;
-  top: 63rem;
-  left: 68rem;
+  top: 108%;
+  left: 57%;
   padding: 10px 20px;
   border: none;
   border-radius: 8x;
@@ -159,8 +159,8 @@ h1 {
   position: absolute;
   width: 24%;
   height: 25%;
-  left: 60.5rem;
-  top: 69rem;
+  top: 119%;
+  left: 51%;
   background: #262626;
   color: white;
   padding: 20px;
