@@ -147,11 +147,11 @@ h1 {
   background: linear-gradient(180deg, #d6d6d6 11.98%, #4c4c4c 100%);
   color: white;
   position: absolute;
-  top: 133%;
-  left: 27.5%;
+  margin-top: 26rem;
+  margin-left: -24.5rem;
   padding: 10px 20px;
   border: none;
-  border-radius: 8x;
+  border-radius: 0.5rem;
   font-family: "Anton", sans-serif;
   font-size: 2rem;
   cursor: pointer;
@@ -178,23 +178,57 @@ h1 {
 
 .container-register{
   display: flex;
+  width: 100vw;
   background-color: #252525;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
 }
 
-.container-register-nome{
-  background-color: white;
-  height: 66px;
-  width: calc(100vw * 0.5);
+.container-register-nome input{
+  color: black;
+  font-size: 1.25em;
+  margin-top: 5rem;
+  margin-left: 10rem;
+  width: 30rem;
+  height: 4rem;
+  border-radius: 0.5rem;
 }
 
-.container-register-preco{
-  background-color: white;
-  height: 66px;
-  width: calc(100vw * 0.5);
+.container-register-preco input {
+  color: black;
+  font-size: 1.25em;
+  margin-top: 3rem;
+  margin-left: 10rem;
+  margin-bottom: 2rem;
+  width: 30rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+}
+
+.container-register-cadastrar {
+  position: relative;
+  margin: 0;
+  margin-left: 13rem;
+  margin-right: 1rem;
+  background-color: #bc002d;
+  border: none;
+  color: white;
+  font-family: "Anton", sans-serif;
+  font-size: 2.50em;
+  padding: 2px 25px 2px 25px;
+  border-radius: 0.5rem;
+}
+
+.container-register-excluir {
+  position: relative;
+  margin: 0;
+  background-color: #bc002d;
+  border: none;
+  color: white;
+  font-family: "Anton", sans-serif;
+  font-size: 2.50em;
+  padding: 2px 25px 2px 25px;
+  border-radius: 0.5rem;
 }
 
 .container-footer {
