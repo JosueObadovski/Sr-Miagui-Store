@@ -26,28 +26,32 @@
       href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500&family=Nunito+Sans:wght@400;700&family=Poppins&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/en/thumb/8/89/Japan-icon.svg/640px-Japan-icon.svg.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="https://upload.wikimedia.org/wikipedia/en/thumb/8/89/Japan-icon.svg/640px-Japan-icon.svg.png"
+      type="image/x-icon"
+    />
   </head>
 
   <body>
-<header>
-  <div class="header-container">
-    <h1>Sr. Miagui Store</h1>
-    <p class="header-container-text">O que você está procurando ?</p>
-    <img
-      src="imagens/Steve-Zondicons-Search.svg"
-      alt="Lupa de buscar dentro do conteiner de busca"
-      class="lupa"
-    />
-    <button class="back-button" id="showScreen1" onclick="showScreen1()">
-      <img
-        src="imagens/backbutton.svg"
-        alt="Botão de voltar para a página inicial"
-        class="back-button-image"
-      />
-    </button>
-  </div>
-</header>
+    <header>
+      <div class="header-container">
+        <h1>Sr. Miagui Store</h1>
+        <p class="header-container-text">O que você está procurando ?</p>
+        <img
+          src="imagens/Steve-Zondicons-Search.svg"
+          alt="Lupa de buscar dentro do conteiner de busca"
+          class="lupa"
+        />
+        <button class="back-button" id="showScreen1" onclick="showScreen1()">
+          <img
+            src="imagens/backbutton.svg"
+            alt="Botão de voltar para a página inicial"
+            class="back-button-image"
+          />
+        </button>
+      </div>
+    </header>
 
     <section id="screen1">
       <main>
@@ -98,7 +102,9 @@
               src="https://plus.unsplash.com/premium_photo-1674726322489-f3873671fd37?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80"
               alt="4 Sacolas genérica da cor prata"
             />
-            <button class="products" id="showScreen2" onclick="showScreen2()">Veja nossos Produtos</button>
+            <button class="products" id="showScreen2" onclick="showScreen2()">
+              Veja nossos Produtos
+            </button>
           </div>
           <div class="container-info">
             <img
@@ -117,7 +123,7 @@
       </main>
     </section>
 
-    <section id="screen2" style="display: none;">
+    <section id="screen2" style="display: none">
       <main>
         <div class="landing-page">
           <img
@@ -127,32 +133,50 @@
         </div>
 
         <div class="container-register">
-        <div class="container-register-nome">
-          <div class="lineInput">
-          <label for="Produto"></label>
-          <input type="text" id="produto" placeholder="Nome do produto" />
-        </div>
-
-        <div class="container-register-preco">
-          <div class="lineInput">
-          <label for="Preco"></label>
-          <input type="number" id="preco" placeholder="Valor do Produto"/>
-        </div>
-
-        <div>
-          <button class="container-register-cadastrar">Cadastrar</button>
-          <button class="container-register-excluir">Excluir</button>
-        </div>
-
-        <div class="container-register-descrição">
-          <div class="lineInput">
-          <label for="Descricao"></label>
-          <textarea type="text" id="descricao" placeholder="Descrição" required></textarea>
+          <div class="container-register-nome">
+            <div class="lineInput">
+              <label for="Produto"></label>
+              <input type="text" id="produto" placeholder="Nome do produto" />
+            </div>
           </div>
-        </div>
 
-        <div class="container-register-png">
+          <div class="container-register-preco">
+            <div class="lineInput">
+              <label for="Preco"></label>
+              <input type="number" id="preco" placeholder="Valor do Produto" />
+            </div>
+          </div>
+
+          <div>
+            <button class="container-register-cadastrar">Cadastrar</button>
+            <button class="container-register-excluir">Excluir</button>
+          </div>
+
+          <div class="container-register-descrição">
+            <div class="lineInput">
+              <label for="Descricao"></label>
+              <textarea
+                type="text"
+                id="descricao"
+                placeholder="Descrição"
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="container-register-png">
+            <input type="file" id="image-input" class="custom-file-input" multiple/>
+            <button onclick="addImage()">Adicionar Imagem</button>
+            <div id="image-container"></div>
+          </div>
           
+          <div class="container-products-list">
+            <div class="image-preview-container">
+              <img id="image-preview" src="#" alt="Image Preview" />
+            </div>
+          </div>
+          
+
         </div>
       </main>
     </section>

@@ -13,3 +13,21 @@ function showScreen2() {
 document.getElementById("showScreen1").addEventListener("click", function() {
   showScreen1();
 });
+
+function addImage() {
+  var fileInput = document.getElementById("image-input")
+  var file = fileInput.files[0]
+  var imagePreview = document.getElementById("image-preview")
+
+  if (file) {
+    var reader = new FileReader()
+
+    reader.onload = function (e) {
+      imagePreview.src = e.target.result
+    }
+
+    reader.readAsDataURL(file)
+  }
+}
+
+

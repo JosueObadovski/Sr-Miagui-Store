@@ -11,6 +11,7 @@ font-family: "Poppins", sans-serif;
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .header-container {
@@ -196,8 +197,8 @@ h1 {
 .container-register-preco input {
   color: black;
   font-size: 1.25em;
-  margin-top: 3rem;
-  margin-left: 10rem;
+  margin-top: 12rem;
+  margin-left: -31.8rem;
   margin-bottom: 2rem;
   width: 30rem;
   height: 4rem;
@@ -207,7 +208,8 @@ h1 {
 .container-register-cadastrar {
   position: relative;
   margin: 0;
-  margin-left: 13rem;
+  margin-top: 18rem;
+  margin-left: -30rem;
   margin-right: 1rem;
   background-color: #bc002d;
   border: none;
@@ -235,8 +237,8 @@ h1 {
   float: left;
   color: black;
   font-size: 1.25em;
-  margin-top: -25.9rem;
-  margin-left: 40rem;
+  margin-top: 1.8rem;
+  margin-left: -4rem;
   margin-bottom: 2rem;
   width: 30rem;
   border-radius: 0.5rem;
@@ -247,16 +249,67 @@ h1 {
   height: 100%;
   margin-left: 4rem;
   margin-top: 3.2rem;
-  resize: vertical;
+  resize: both;
   border-radius: 0.5rem;
   color: black;
   font-size: 1.25em;
-  max-height: 10rem;
-  overflow-y: auto;
+  max-height: 19rem;
+  max-width: 32rem;
 }
 
 .container-register-png{
   background-color: white;
+  width: 15rem;
+  height: 19.5rem;
+  margin-left: 80rem;
+  margin-top: -23.3rem;
+  border-radius: 0.5rem;
+  }
+
+  .container-register-png button{
+    color: black;
+    width: 8rem;
+    margin-top: 11rem;
+    margin-left: 3.5rem;
+  }
+
+.container-register
+  .custom-file-input {
+  background-color: #bc002d;
+  color: white;
+  padding: 0.5rem 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-family: "Anton", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  max-width: 10rem;
+  margin-top: 6.5rem;
+  margin-left: 2rem;
+}
+
+.container-products-list{
+  background-color: #bc002d;
+  width: 100%;
+  height: auto;
+}
+
+.image-preview-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin-top: 1rem;
+  margin-left: 10rem;
+  width: 15.5rem;
+  height: 21.5rem; /* Ajuste a altura conforme necessário */
+  border-radius: 0.5rem;
+}
+
+#image-preview {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .container-footer {
