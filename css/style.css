@@ -30,13 +30,13 @@ body {
 .header-container-text {
   position: relative;
   background-color: white;
-  width: 100vw;
-  height: 5vh;
+  width: 150vw;
+  height: 6vh;
   color: black;
   padding-left: 1em;
   text-align: left;
   line-height: 3rem;
-  margin: 1% 30% 1% 0;
+  margin: 1% 10% 1% 0;
   font-size: 1.5em;
   outline: none;
   font-family: "Poppins", sans-serif;
@@ -49,7 +49,7 @@ body {
   border: none;
   cursor: pointer;
   margin-bottom: 0.5%;
-  right: 33%;
+  right: 13vw;
   width: 1.5em;
 }
 
