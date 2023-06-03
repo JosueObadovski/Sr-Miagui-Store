@@ -34,34 +34,30 @@
   </head>
 
   <body>
+    <!-------------------------------------------------------------------------Header---------------------------------------------------------------------->
     <header>
       <div class="header-container">
+
         <h1>Sr. Miagui Store</h1>
         <p class="header-container-text">O que você está procurando ?</p>
-        <img
-          src="imagens/Steve-Zondicons-Search.svg"
-          alt="Lupa de buscar dentro do conteiner de busca"
-          class="lupa"
-        />
+        <img src="imagens/Steve-Zondicons-Search.svg" alt="Lupa de buscar dentro do conteiner de busca" class="lupa"/>
+
         <button class="back-button" id="showScreen1" onclick="showScreen1()">
-          <img
-            src="imagens/backbutton.svg"
-            alt="Botão de voltar para a página inicial"
-            class="back-button-image"
-          />
-        </button>
+          <img src="imagens/backbutton.svg" alt="Botão de voltar para a página inicial" class="back-button-image"/></button>
       </div>
     </header>
+    <!---------------------------------------------------------------------Primeira Tela------------------------------------------------------------------->
 
     <section id="screen1">
       <main>
+        <!-----------------------------------------------------------------Landing Page-------------------------------------------------------------------->
         <div class="landing-page">
           <img
             src="https://images.unsplash.com/photo-1530795318892-5cdc7a87d71b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
             alt="Imagem de uma vitrine colorida dentro de uma loja asiática"
           />
         </div>
-
+        <!-----------------------------------------------------------------Etapas do site----------------------------------------------------------------->
         <div class="container-steps">
           <div class="step">
             <img
@@ -95,22 +91,18 @@
             <p class="container-steps">Compre!</p>
           </div>
         </div>
-
+        <!---------------------------------------------------------Cards que direcionam para tela 2-------------------------------------------------------->
         <div class="container-third-screen">
+
           <div class="container-products">
-            <img
-              src="https://plus.unsplash.com/premium_photo-1674726322489-f3873671fd37?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80"
-              alt="4 Sacolas genérica da cor prata"
-            />
-            <button class="products" id="showScreen2" onclick="showScreen2()">
-              Veja nossos Produtos
-            </button>
+            <img src="https://plus.unsplash.com/premium_photo-1674726322489-f3873671fd37?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80" alt="4 Sacolas genérica da cor prata" />
+            
+            <button class="products" id="showScreen2" onclick="showScreen2()">Veja nossos Produtos</button>
+
           </div>
+
           <div class="container-info">
-            <img
-              src="https://images.unsplash.com/photo-1503924986277-3f922045c7bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1093&q=80"
-              alt="Fachada de loja asiática a noite em neon"
-            />
+            <img src="https://images.unsplash.com/photo-1503924986277-3f922045c7bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1093&q=80" alt="Fachada de loja asiática a noite em neon"/>
           </div>
 
           <div class="contact">
@@ -122,85 +114,94 @@
         </div>
       </main>
     </section>
+<!----------------------------------------------------------------------Segunda Tela----------------------------------------------------------------------->
 
     <section id="screen2" style="display: none">
       <main>
+<!-----------------------------------------------------------------Landing Page---------------------------------------------------------------------------->
+
         <div class="landing-page">
           <img
             src="https://images.unsplash.com/photo-1530795318892-5cdc7a87d71b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
             alt="Imagem de uma vitrine colorida dentro de uma loja asiática"
           />
         </div>
-
+<!-----------------------------------------------------------------Cadastro dos Produtos------------------------------------------------------------------->
         <div class="container-register">
+
           <div class="container-register-nome">
+
             <div class="lineInput">
-              <label for="Produto"></label>
               <input type="text" id="produto" placeholder="Nome do produto" />
             </div>
+
           </div>
 
           <div class="container-register-preco">
             <div class="lineInput">
-              <label for="Preco"></label>
               <input type="number" id="preco" placeholder="Valor do Produto" />
             </div>
           </div>
 
           <div>
-            <button class="container-register-cadastrar">Cadastrar</button>
-            <button class="container-register-excluir">Excluir</button>
+            <button class="container-register-cadastrar" onclick="produto.adicionaProduto()" id="cadastra"> Cadastrar</button>
+            <button class="container-register-excluir" onclick="produto.deletaProduto()" id="deleta">Excluir</button>
           </div>
 
           <div class="container-register-descrição">
             <div class="lineInput">
-              <label for="Descricao"></label>
-              <textarea
-                type="text"
-                id="descricao"
-                placeholder="Descrição"
-                required
-              ></textarea>
+              <textarea type="text" id="descricao" placeholder="Descrição" required ></textarea>
             </div>
           </div>
 
           <div class="container-register-png">
-            <input type="file" id="image-input" class="custom-file-input" multiple/>
+            <input type="file" id="image-input" class="custom-file-input" multiple />
             <button onclick="addImage()">Adicionar Imagem</button>
             <div id="image-container"></div>
           </div>
-          
+<!-----------------------------------------------------------------Exibição dos Produtos------------------------------------------------------------------->
           <div class="container-products-list">
+            
             <div class="image-preview-container">
               <img id="image-preview" src="#" alt="Image Preview" />
             </div>
+
+            <div class="container-products-list-info">
+              <label for="Produto" class="container-products-list-info"
+                >Produto:</label>
+              <label for="Preco" class="container-products-list-info"
+                >Preço:</label>
+              <label for="Descricao" class="container-products-list-info"
+                >Descrição:</label>
+            </div>
           </div>
-          
 
         </div>
       </main>
     </section>
+    <!-------------------------------------------------------------------------Footer-------------------------------------------------------------------------->
     <footer class="container-footer">
       <p>&copy 2023 - Todos os direitos reservados. Conteúdo licenciado.</p>
+
       <div class="social-icon">
         <img
           src="imagens/logo-github.svg"
           alt="Logo Github"
           class="social-icon-github"
-          onclick="redirecionar('https://github.com/JosueObadovski/Sr-Miagui-Store')"
-        />
+          onclick="redirecionar('https://github.com/JosueObadovski/Sr-Miagui-Store')"/>
+
         <img
           src="imagens/logo-whatsapp.svg"
           alt="Logo Whatsapp"
           class="social-icon-whatsapp"
-          onclick="redirecionar('https://wa.me/5545998017803')"
-        />
+          onclick="redirecionar('https://wa.me/5545998017803')"/>
+
         <img
           src="imagens/logo-instagram.svg"
           alt="Logo Instagram"
           class="social-icon-instagram"
-          onclick="redirecionar('https://www.instagram.com/josueobadovski/')"
-        />
+          onclick="redirecionar('https://www.instagram.com/josueobadovski/')"/>
+
       </div>
     </footer>
   </body>
