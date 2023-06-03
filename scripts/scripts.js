@@ -32,12 +32,35 @@ function addImage() {
   }
 }
 
+<<<<<<< HEAD
 //-------------------Função para cadastrar e excluir produtos---------------
   function adicionaProduto() {
     var nomeProduto = document.getElementById("produto").value;
     // Aqui você pode fazer o processamento do nome do produto, como salvá-lo em uma variável ou enviá-lo para um servidor.
     console.log("Produto cadastrado:", nomeProduto);
   }
+=======
+function cadastrar() {
+  var nomeInput = document.getElementById("nome-input").value
+  var precoInput = document.getElementById("preco-input").value
+  var descricaoInput = document.getElementById("descricao-input").value
+
+  // Exemplo de ação: exibindo os valores no console
+  console.log("Nome:", nomeInput)
+  console.log("Preço:", precoInput)
+  console.log("Descrição:", descricaoInput)
+
+  // Adicione o código adicional para realizar o cadastro ou qualquer outra ação desejada
+
+  // Limpar os campos após o cadastro
+  document.getElementById("nome-input").value = ""
+  document.getElementById("preco-input").value = ""
+  document.getElementById("descricao-input").value = ""
+}
+
+// Evento de clique para cadastrar
+document.getElementById("cadastrar-button").addEventListener("click", cadastrar)
+>>>>>>> 527ef553c6896b917d0089813e2afd69cb6aaece
 
   function deletaProduto() {
   // Exibir mensagem de confirmação ao usuário
