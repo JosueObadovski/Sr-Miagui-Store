@@ -44,11 +44,13 @@ body {
 }
 
 .lupa {
-  width: 1.5%;
-  position: absolute;
-  top: 5.6%;
-  left: 67%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 0.5%;
+  right: 33%;
+  width: 1.5em;
 }
 
 .back-button {
@@ -57,6 +59,7 @@ body {
   border: none;
   cursor: pointer;
   right: 65%;
+  margin-right: 3%;
 }
 
 .back-button-image {
@@ -114,25 +117,28 @@ h1 {
 }
 
 .container-third-screen {
-  height: 575px;
+  height: 35rem;
   background-color: #bc002d;
 }
 
 .container-products img {
-  width: 24%;
-  height: 50vh;
+  width: 29em;
+  height: 29em;
   margin-left: 23.75%;
   margin-top: 2.5%;
   object-fit: cover;
   border-radius: 12px;
 }
 
-.container-info img {
-  position: absolute;
-  width: 26.2%;
-  height: 25%;
-  left: 50.9%;
-  top: 54rem;
+.container-info{
+  margin-top: -30.5em;
+  margin-left: 63em;
+}
+
+.container-info img{
+  width: 26.2em;
+  height: 15em;
+  margin-top: 1em;
   object-fit: cover;
   border-radius: 12px;
 }
@@ -151,36 +157,21 @@ h1 {
   cursor: pointer;
 }
 
-.venha-nos-visitar {
-  background: linear-gradient(180deg, #000000 58.33%, #2f2f39 100%);
-  color: white;
-  position: absolute;
-  top: 108%;
-  left: 57%;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8x;
-  font-family: "Anton", sans-serif;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
 .contact {
-  position: absolute;
-  width: 24%;
-  height: 25%;
-  top: 119%;
-  left: 51%;
+  width: 24em;
+  height: 11.5em;
+  margin-top: 0em;
+  margin-left: 63em;
   background: #262626;
   color: white;
   padding: 20px;
   border-radius: 12px;
-  overflow: hidden;
   line-height: 1.5rem;
 }
 
 .contact p {
   font-size: 27px;
+  margin-top: -0.1rem;
   text-align: center;
   font-family: "Anton", sans-serif;
 }
@@ -194,8 +185,16 @@ h1 {
   gap: 20px;
 }
 
-.container-register p{
-  
+.container-register-nome{
+  background-color: white;
+  height: 66px;
+  width: calc(100vw * 0.5);
+}
+
+.container-register-preco{
+  background-color: white;
+  height: 66px;
+  width: calc(100vw * 0.5);
 }
 
 .container-footer {
