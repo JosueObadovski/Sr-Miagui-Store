@@ -49,6 +49,7 @@ body {
   border: none;
   cursor: pointer;
   right: 13vw;
+  bottom: 0.5vh;
   width: 1.5em;
 }
 
