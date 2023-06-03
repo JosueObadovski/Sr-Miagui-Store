@@ -147,8 +147,8 @@ h1 {
   background: linear-gradient(180deg, #d6d6d6 11.98%, #4c4c4c 100%);
   color: white;
   position: absolute;
-  margin-top: 26rem;
-  margin-left: -24.5rem;
+  top: 77rem;
+  left: 33rem;
   padding: 10px 20px;
   border: none;
   border-radius: 0.5rem;
@@ -217,6 +217,7 @@ h1 {
   font-size: 2.50em;
   padding: 2px 25px 2px 25px;
   border-radius: 0.5rem;
+  margin-bottom: 5rem;
 }
 
 .container-register-excluir {
@@ -235,12 +236,10 @@ h1 {
   float: left;
   color: black;
   font-size: 1.25em;
-  margin-top: -20.9rem;
+  margin-top: -25.9rem;
   margin-left: 40rem;
   margin-bottom: 2rem;
   width: 30rem;
-  height: 14rem;
-  min-height: 10rem;
   border-radius: 0.5rem;
 }
 
@@ -268,7 +267,7 @@ h1 {
   left: 0;
   width: 100%;
   height: 6.25em;
-  background-color: #262626;
+  background-color: #101010;
   line-height: 3rem;
   margin-top: auto;
 }
