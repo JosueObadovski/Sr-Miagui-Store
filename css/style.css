@@ -48,7 +48,6 @@ body {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  margin-bottom: 0.5%;
   right: 13vw;
   width: 1.5em;
 }
@@ -58,7 +57,7 @@ body {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  right: 65%;
+  right: 60vw;
   margin-right: 3%;
 }
 
