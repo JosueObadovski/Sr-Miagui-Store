@@ -17,7 +17,7 @@ body {
   display: flex;
   background-color: #bc002d;
   color: white;
-  padding: 8px;
+  padding: 7px;
 }
 
 .header-container h1 {
@@ -49,8 +49,7 @@ body {
   border: none;
   cursor: pointer;
   right: 13vw;
-  bottom: 0.5vh;
-  width: 1.5em;
+  width: 2em;
 }
 
 .back-button {
