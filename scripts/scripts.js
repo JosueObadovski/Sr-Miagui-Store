@@ -58,37 +58,42 @@ function addImage() {
   // }  
 
 function deletaProduto() {
-  var confirmacao = confirm("Deseja realmente excluir o produto?");
+  var confirmacao = confirm("Deseja realmente excluir o produto?")
 
   if (confirmacao) {
-    var containerProductsList = document.getElementById("lista-produtos");
-    var produtos = containerProductsList.getElementsByClassName(
-      "product-container"
-    );
+    var containerProductsList = document.getElementById("lista-produtos")
+    var produtos =
+      containerProductsList.getElementsByClassName("product-container")
 
     if (produtos.length > 0) {
-      containerProductsList.removeChild(produtos[produtos.length - 1]);
+      containerProductsList.removeChild(produtos[produtos.length - 1])
     }
 
     if (produtos.length === 1) {
-      containerProductsList.style.display = "none";
+      containerProductsList.style.display = "none"
     }
 
-    console.log("Produto excluído");
+    console.log("Produto excluído")
   }
 }
-
 
 function adicionaProduto() {
   var nomeProduto = document.getElementById("produto").value
   var valorProduto = document.getElementById("preco").value
   var descricaoProduto = document.getElementById("descricao").value
-  var imagePreviewSrc = document.getElementById("image-preview").src
+  var imagePreviewSrc = document
+    .getElementById("image-preview")
+    .getAttribute("src")
+
+  if (!imagePreviewSrc || imagePreviewSrc === "#") {
+    alert("Por favor, selecione uma imagem para o produto.")
+    return
+  }
 
   var containerProductsList = document.getElementById("lista-produtos")
 
   var produtoDiv = document.createElement("div")
-  produtoDiv.classList.add("product-container") // Corrigido para "product-container"
+  produtoDiv.classList.add("product-container")
 
   var imagemDiv = document.createElement("div")
   imagemDiv.classList.add("image-preview-container")
@@ -126,8 +131,11 @@ function adicionaProduto() {
   document.getElementById("produto").value = ""
   document.getElementById("preco").value = ""
   document.getElementById("descricao").value = ""
-  document.getElementById("image-preview").src = ""
+  document.getElementById("image-preview").src = "#"
 
   console.log("Produto cadastrado:", nomeProduto)
 }
+
+
+
 

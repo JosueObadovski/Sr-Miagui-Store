@@ -152,10 +152,11 @@
     </div>
   </div>
 
-  <div class="container-register-png">
-    <input type="file" id="image-input" class="custom-file-input" multiple />
-    <div id="image-container"></div>
-  </div>
+<div class="container-register-png">
+  <input type="file" id="image-input" class="custom-file-input" onchange="addImage()" accept="image/*" required />
+  <div id="image-container"></div>
+</div>
+
 
 <div class="container-products-list container-register-item" id="lista-produtos"></div>
 </div>
