@@ -184,6 +184,10 @@ h1 {
   gap: 20px;
 }
 
+.container-register-item {
+  margin-top: 1rem;
+}
+
 .container-register-nome input{
   color: black;
   font-size: 1.25em;
@@ -209,7 +213,7 @@ h1 {
   position: relative;
   margin: 0;
   margin-top: 18rem;
-  margin-left: -30rem;
+  margin-left: -32rem;
   margin-right: 1rem;
   background-color: #bc002d;
   border: none;
@@ -231,6 +235,9 @@ h1 {
   font-size: 2.50em;
   padding: 2px 25px 2px 25px;
   border-radius: 0.5rem;
+  margin-top: 18rem;
+  width: 12.865rem;
+  height: 4rem;
 }
 
 .container-register-descrição{
@@ -247,7 +254,7 @@ h1 {
 .container-register-descrição textarea{
   width: 100%;
   height: 100%;
-  margin-left: 4rem;
+  margin-left: 6rem;
   margin-top: 3.2rem;
   padding: 1rem;
   resize: both;
@@ -290,39 +297,51 @@ h1 {
   margin-left: 1.2rem;
 }
 
-.container-products-list{
-  background-color: #bc002d;
-  width: 100%;
-  height: auto;
+.container-products-list {
+  display: none;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.container-products-list .product-container {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
 }
 
 .image-preview-container {
   display: flex;
   justify-content: center;
   background-color: white;
-  margin-top: 1rem;
-  margin-left: 10rem;
   width: 15.5rem;
   height: 21.5rem;
   border-radius: 0.5rem;
 }
 
-#image-preview {
+.image-preview-container img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: cover;
-  border-radius: 0.5rem;
+  object-fit: contain;
 }
 
-.container-products-list-info{
+.container-products-list-info {
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin-left: 5rem;
   color: white;
+  font-family: "Poppins", sans-serif;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
-  font-family: "Poppins", sans-serif;
+}
+
+.container-products-list-info label {
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .container-footer {

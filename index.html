@@ -127,49 +127,41 @@
           />
         </div>
 <!-----------------------------------------------------------------Cadastro dos Produtos------------------------------------------------------------------->
-        <div class="container-register">
+<div class="container-register">
+  <div class="container-register-nome">
+    <div class="lineInput">
+      <label for="Produto"></label>
+      <input type="text" id="produto" placeholder="Nome do produto" />
+    </div>
+  </div>
 
-          <div class="container-register-nome">
+  <div class="container-register-preco">
+    <div class="lineInput">
+      <label for="Preco"></label>
+      <input type="number" id="preco" placeholder="Valor do Produto" />
+    </div>
+  </div>
 
-            <div class="lineInput">
-              <label for="Produto"></label>
-              <input type="text" id="produto" placeholder="Nome do produto" />
-            </div>
+  <button class="container-register-cadastrar" onclick="adicionaProduto()">Cadastrar</button>
+  <button class="container-register-excluir" onclick="deletaProduto()">Excluir</button>
 
-          </div>
+  <div class="container-register-descrição">
+    <div class="lineInput">
+      <label for="Descricao"></label>
+      <textarea type="text" id="descricao" placeholder="Descrição" required></textarea>
+    </div>
+  </div>
 
-          <div class="container-register-preco">
-            <div class="lineInput">
-              <label for="Preco"></label>
-              <input type="number" id="preco" placeholder="Valor do Produto" />
-            </div>
-          </div>
+  <div class="container-register-png">
+    <input type="file" id="image-input" class="custom-file-input" multiple />
+    <div id="image-container"></div>
+  </div>
 
-          <div>
-            <button class="container-register-cadastrar" onclick="produto.adicionaProduto()" id="cadastra"> Cadastrar</button>
-            <button class="container-register-excluir" onclick="produto.deletaProduto()" id="deleta">Excluir</button>
-          </div>
+<div class="container-products-list container-register-item" id="lista-produtos"></div>
+</div>
 
-          <div class="container-register-descrição">
-            <div class="lineInput">
-              <label for="Descricao"></label>
-              <textarea
-                type="text"
-                id="descricao"
-                placeholder="Descrição"
-                required
-              ></textarea>
-            </div>
-          </div>
-
-          <div class="container-register-png">
-            <input type="file" id="image-input" class="custom-file-input" multiple />
-            <button onclick="addImage()">Adicionar Imagem</button>
-            <div id="image-container"></div>
-          </div>
 <!-----------------------------------------------------------------Exibição dos Produtos------------------------------------------------------------------->
-          <div class="container-products-list">
-            
+        <div class="container-products-list" id="lista-produtos">
             <div class="image-preview-container">
               <img id="image-preview" src="#" alt="Image Preview" />
             </div>

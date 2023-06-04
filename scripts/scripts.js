@@ -33,26 +33,101 @@ function addImage() {
 }
 
 //-------------------Função para cadastrar e excluir produtos---------------
-  function adicionaProduto() {
-    var nomeProduto = document.getElementById("produto").value;
-    // Aqui você pode fazer o processamento do nome do produto, como salvá-lo em uma variável ou enviá-lo para um servidor.
-    console.log("Produto cadastrado:", nomeProduto);
-  }
+  // function adicionaProduto() {
+  //   var nomeProduto = document.getElementById("produto").value;
+  //   // Aqui você pode fazer o processamento do nome do produto, como salvá-lo em uma variável ou enviá-lo para um servidor.
+  //   console.log("Produto cadastrado:", nomeProduto);
+    
+  //     function adicionaPreco() {
+  //       var valorProduto = document.getElementById("preco").value
+  //       // Aqui você pode fazer o processamento do nome do produto, como salvá-lo em uma variável ou enviá-lo para um servidor.
+  //       console.log("Preço cadastrado:", valorProduto)
+  //     }
+  
+  //         function adicionaDescricao() {
+  //           var descricaoProduto = document.getElementById("descricao").value
+  //           // Aqui você pode fazer o processamento do nome do produto, como salvá-lo em uma variável ou enviá-lo para um servidor.
+  //           console.log("Descrição cadastrado:", descricaoProduto)
+  //         }
 
-  function deletaProduto() {
-  // Exibir mensagem de confirmação ao usuário
+  //            document.getElementById("produto").value = ""
+  //            document.getElementById("preco").value = ""
+  //            document.getElementById("descricao").value = ""
+
+  //            console.log("Produto excluído")
+  // }  
+
+function deletaProduto() {
   var confirmacao = confirm("Deseja realmente excluir o produto?");
 
   if (confirmacao) {
-    // Remover o produto da seção de exibição
-    var containerProductsList = document.querySelector(".container-products-list");
-    containerProductsList.remove();
+    var containerProductsList = document.getElementById("lista-produtos");
+    var produtos = containerProductsList.getElementsByClassName(
+      "product-container"
+    );
 
-    // Limpar os campos de nome do produto, preço e descrição
-    document.getElementById("produto").value = "";
-    document.getElementById("preco").value = "";
-    document.getElementById("descricao").value = "";
+    if (produtos.length > 0) {
+      containerProductsList.removeChild(produtos[produtos.length - 1]);
+    }
+
+    if (produtos.length === 1) {
+      containerProductsList.style.display = "none";
+    }
 
     console.log("Produto excluído");
   }
 }
+
+
+function adicionaProduto() {
+  var nomeProduto = document.getElementById("produto").value
+  var valorProduto = document.getElementById("preco").value
+  var descricaoProduto = document.getElementById("descricao").value
+  var imagePreviewSrc = document.getElementById("image-preview").src
+
+  var containerProductsList = document.getElementById("lista-produtos")
+
+  var produtoDiv = document.createElement("div")
+  produtoDiv.classList.add("product-container") // Corrigido para "product-container"
+
+  var imagemDiv = document.createElement("div")
+  imagemDiv.classList.add("image-preview-container")
+
+  var imagem = document.createElement("img")
+  imagem.src = imagePreviewSrc
+  imagem.alt = "Imagem do Produto"
+  imagem.classList.add("image-preview")
+
+  imagemDiv.appendChild(imagem)
+
+  var infoDiv = document.createElement("div")
+  infoDiv.classList.add("container-products-list-info")
+
+  var nomeLabel = document.createElement("label")
+  nomeLabel.textContent = "Produto: " + nomeProduto
+
+  var precoLabel = document.createElement("label")
+  precoLabel.textContent = "Preço: " + valorProduto
+
+  var descricaoLabel = document.createElement("label")
+  descricaoLabel.textContent = "Descrição: " + descricaoProduto
+
+  infoDiv.appendChild(nomeLabel)
+  infoDiv.appendChild(precoLabel)
+  infoDiv.appendChild(descricaoLabel)
+
+  produtoDiv.appendChild(imagemDiv)
+  produtoDiv.appendChild(infoDiv)
+
+  containerProductsList.appendChild(produtoDiv)
+
+  containerProductsList.style.display = "flex"
+
+  document.getElementById("produto").value = ""
+  document.getElementById("preco").value = ""
+  document.getElementById("descricao").value = ""
+  document.getElementById("image-preview").src = ""
+
+  console.log("Produto cadastrado:", nomeProduto)
+}
+
