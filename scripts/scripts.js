@@ -32,31 +32,6 @@ function addImage() {
   }
 }
 
-//-------------------Função para cadastrar e excluir produtos---------------
-  // function adicionaProduto() {
-  //   var nomeProduto = document.getElementById("produto").value;
-  //   // Aqui você pode fazer o processamento do nome do produto, como salvá-lo em uma variável ou enviá-lo para um servidor.
-  //   console.log("Produto cadastrado:", nomeProduto);
-    
-  //     function adicionaPreco() {
-  //       var valorProduto = document.getElementById("preco").value
-  //       // Aqui você pode fazer o processamento do nome do produto, como salvá-lo em uma variável ou enviá-lo para um servidor.
-  //       console.log("Preço cadastrado:", valorProduto)
-  //     }
-  
-  //         function adicionaDescricao() {
-  //           var descricaoProduto = document.getElementById("descricao").value
-  //           // Aqui você pode fazer o processamento do nome do produto, como salvá-lo em uma variável ou enviá-lo para um servidor.
-  //           console.log("Descrição cadastrado:", descricaoProduto)
-  //         }
-
-  //            document.getElementById("produto").value = ""
-  //            document.getElementById("preco").value = ""
-  //            document.getElementById("descricao").value = ""
-
-  //            console.log("Produto excluído")
-  // }  
-
 function deletaProduto() {
   var confirmacao = confirm("Deseja realmente excluir o produto?")
 
